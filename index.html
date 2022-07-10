@@ -41,7 +41,6 @@ console.log(`${player} played ${playerSelection}`);
  } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissor') || (playerSelection === 'scissor' && computerSelection === 'rock')) {
     computerScore++;
     return console.log('Computer wins.')
-    
  }
 
 }
@@ -55,8 +54,12 @@ let playerSelection;
 function game() {
 // keeps track of rounds, 5 rounds
     for (let i = 0; i < 5; i++) {
+
     playGame(playerSelection = prompt(`Choose your weapon, ${player}.`));
     console.log(`${player}: ${playerScore}      Computer: ${computerScore}`);
+    if (playerSelection === '') {
+        break;
+    }
 }
  }
 game();
