@@ -50,16 +50,19 @@ let playerScore = 0;
 let computerScore = 0;
 let computerSelection = computerPlay();
 let playerSelection;
-// game function call playround inside the function
+
+// game function call playround function inside with loop
 function game() {
+// keeps track of rounds, 5 rounds
     for (let i = 0; i < 5; i++) {
     playGame(playerSelection = prompt(`Choose your weapon, ${player}.`));
-    console.log(`${player}: ${playerScore} Computer: ${computerScore}`);
-    
-} }
+    console.log(`${player}: ${playerScore}      Computer: ${computerScore}`);
+}
+ }
 game();
-// keeps track of rounds, 5 rounds 
+
 // reports who wins after those 5 rounds
+
     </script>
 </body>
 </html>
