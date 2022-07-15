@@ -5,65 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js-file.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-// computerPlay get random number and assign it to rock, paper, or scissor
-function computerPlay() {
-    let randomNum = Math.floor(Math.random() * 3);
-    switch(randomNum) {
-        case 0:
-        return 'rock';
-        break;
-
-        case 1:
-        return 'paper';
-        break;
-
-        case 2:
-        return 'scissor';
-    }
-}
-// function that plays the game. two parameters playerSelection and computerSelection
-
-function playGame(playerSelection, computerSelection) {
-computerSelection = computerPlay().toLowerCase();
-playerSelection = playerSelection.toLowerCase();
-
-console.log(`Computer played ${computerSelection}`);
-console.log(`${player} played ${playerSelection}`);
- if (playerSelection == computerSelection) {
-    return console.log('It\'s a tie!');
- } else if ((playerSelection === 'rock' && computerSelection === 'scissor') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissor' && computerSelection === 'paper')) {
-    playerScore++
-    return console.log(`${player} wins.`);
-    
- } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissor') || (playerSelection === 'scissor' && computerSelection === 'rock')) {
-    computerScore++;
-    return console.log('Computer wins.')
- }
-
-}
-let player = prompt('What is your name?');
-let playerScore = 0;
-let computerScore = 0;
-let computerSelection = computerPlay();
-let playerSelection;
-
-// game function call playround function inside with loop
-function game() {
-// keeps track of rounds, 5 rounds
-    for (let i = 0; i < 5; i++) {
-
-    playGame(playerSelection = prompt(`Choose your weapon, ${player}.`));
-    console.log(`${player}: ${playerScore}      Computer: ${computerScore}`);
-    if (playerSelection === '') {
-        break;
-    }
-}
- }
-game();
-
-    </script>
+<button class="rock">Rock</button>
+<button class="paper">Paper</button>
+<button class="scissor">Scissor</button>
+<div class="div"></div>
+    <button class="reset">Reset Game</button>
+<h1 class="win"></h1>
 </body>
+
 </html>
